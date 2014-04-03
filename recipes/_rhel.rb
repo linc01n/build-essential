@@ -26,10 +26,4 @@ potentially_at_compile_time do
   package 'kernel-devel'
   package 'make'
   package 'm4'
-
-  # Ensure GCC 4 is available on older pre-6 EL
-  if node['platform_version'].to_i < 6
-    package 'gcc44'
-    package 'gcc44-c++'
-  end
 end
